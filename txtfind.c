@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
 
         char input[MAX_INPUT_LENGTH];
         char *p = input;  // p will be used to iterate through input array
-        int c;
+        int c = 0;
 
         // Read input one character at a time until end of input or array is full
         while ((c = getchar()) != EOF && p < input + MAX_INPUT_LENGTH - 1) {
@@ -86,7 +86,7 @@ int main(int argc, char *argv[]) {
 
             // initializes all elements of the array word to 0
             // strcpy(word, empty_word);
-            int i;
+            int i = 0;
             for (i = 0; i < strlen(word); i++) {
                 *(word + i) = ' ';
             }
