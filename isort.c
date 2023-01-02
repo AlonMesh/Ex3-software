@@ -10,11 +10,11 @@ void shift_element(int* arr, int i)
 }
 
 // int* arr shall point to the arr[0] manually
-void insertion_sort(int* arr , int len)
+void insertion_sort(int* arr)
 {
-    for(int i = 0; i < len; i++)
+    for(int i = 0; i < SIZE; i++)
     {
-      for (int j = i; j >= 0; j--) {
+      for (int j = i; j > 0; j--) {
              if (*(arr+j-1) > *(arr+j)) {
                 int temp = *(arr+j);
                 shift_element(arr+j-1, 1);
@@ -27,14 +27,14 @@ void insertion_sort(int* arr , int len)
 void main() {
     // CRITIC: we need to get an input from file.txt. Now well do it primitive.
     int arr[SIZE];
-    printf("Enter a");
-    for (int i = 0;i < SIZE; i++)
-    {
-        int x;
-        scanf("%d", &x);
-        *(arr + i) = x;
+    
+    // Read integers from standard input and store them in the arrayint
+    int i = 0;
+    while (i < SIZE && scanf("%d", &arr[i]) == 1) {
+        i++;
     }
-    insertion_sort((arr),SIZE);
+
+    insertion_sort(arr);
 
     for (int i = 0; i < SIZE; i++)
     {
@@ -43,6 +43,6 @@ void main() {
             printf(",");
         }
     }
-    //printf("\n"); //sus!!
+    printf("\n"); //sus!!
    
 }
