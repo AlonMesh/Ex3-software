@@ -15,8 +15,7 @@ int main(int argc, char *argv[]) {
     scanf("%s", first_word_temp);
     strcpy(first_word, first_word_temp);
 
-    scanf("%c", &a_or_b);
-
+    scanf("%s", &a_or_b);
 
     if ((a_or_b) == 'a') 
     {
