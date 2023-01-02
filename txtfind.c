@@ -3,7 +3,7 @@
 #include <string.h>
 #define LINE 256
 #define WORD 30
-#define MAX_INPUT_LENGTH 10000
+#define MAX_INPUT_LENGTH 64000
 
 int main(int argc, char *argv[]) {
 
