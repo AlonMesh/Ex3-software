@@ -10,14 +10,15 @@ int main(int argc, char *argv[]) {
     // First, we'll get the first line which provides us the special word and a/b.
     char first_word_temp[WORD];
     char first_word[WORD];
-    char a_or_b[1];
+    char a_or_b = 'a';
+
     scanf("%s", first_word_temp);
     strcpy(first_word, first_word_temp);
 
-    scanf("%s", a_or_b);
+    scanf("%c", &a_or_b);
 
 
-    if (*(a_or_b) == 'a') 
+    if ((a_or_b) == 'a') 
     {
         char input[MAX_INPUT_LENGTH]; //^^
         char word_copy[WORD];
@@ -39,7 +40,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    if (*(a_or_b) == 'b') 
+    if ((a_or_b) == 'b') 
     {
 
 
