@@ -30,7 +30,9 @@ void main() {
     
     // Read integers from standard input and store them in the arrayint
     int i = 0;
-    while (i < SIZE && scanf("%d", &arr[i]) == 1) {
+    int *ptr = arr;
+    while (i < SIZE && scanf("%d", ptr) == 1) {
+        ptr++;
         i++;
     }
 
